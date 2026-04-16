@@ -699,6 +699,9 @@ export const PLUGIN_EVENT_TYPES = [
   // Internal action name used by routes/issues.ts when a comment is added.
   // Listed here so plugins with `events.subscribe` can react to comment events.
   "issue.comment_added",
+  // Emitted when an agent checks out an issue for work. Useful for plugins
+  // that want to inject context (e.g. memory recall) at the start of work.
+  "issue.checked_out",
   "agent.created",
   "agent.updated",
   "agent.status_changed",
